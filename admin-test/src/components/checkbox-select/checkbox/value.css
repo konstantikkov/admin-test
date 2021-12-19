@@ -1,0 +1,14 @@
+.CheckBoxValue{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.Success {
+    color: #8bc34a;
+}
+.Error{
+    color: red;
+}

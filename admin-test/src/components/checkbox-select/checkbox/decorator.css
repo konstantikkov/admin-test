@@ -1,0 +1,25 @@
+.CheckBoxDecorator{
+    width: 10px;
+    height: 10px;
+}
+
+
+.CheckBoxDecoratorOuter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border: 1px gray solid;
+    margin-right: 5px;
+}
+
+.CheckBoxDecoratorSelected{
+    background-color: #8bc34a;
+    transition: background-color 0.5s;
+}
+
+.CheckBoxDecoratorNonSelected{
+    background-color: transparent;
+    transition: background-color 0.5s;
+}
