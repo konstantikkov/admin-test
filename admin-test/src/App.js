@@ -20,7 +20,7 @@ const App = () => {
         setTaskNum(prev => prev + 1)
         setSelectedOption({})
     }
-
+    console.log(task)
     return (
         <div className="App">
           <MainContainer>

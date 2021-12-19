@@ -6,9 +6,10 @@ export const CheckBoxSelect = ({options, selectedOption, setSelectedOption, answ
         setSelectedOption(prev => ({...prev, [key]: !prev[key]}))
     },[])
 
-    const isAnswer = useCallback((key, answerVisible, isSelected) => {
+    const isAnswer = (key, answerVisible, isSelected, answer) => {
         if(answerVisible){
-            if(answer.find((ans) => ans === key)){
+            console.log(answer, key)
+            if(answer.find((ans) => ans === key) !== undefined){
                 if(isSelected){
                     return 'Success'
                 }
@@ -23,13 +24,13 @@ export const CheckBoxSelect = ({options, selectedOption, setSelectedOption, answ
             }
         }
         return ''
-    },[])
+    }
 
     return(
         <div className='CheckBoxSelect'>
             {
                 options.map((option, key) =>
-                    <CheckBox key={key} class_={isAnswer(key, answerVisible, selectedOption[key])} value={key} isAnswer isSelected={selectedOption[key]} selectOption={selectOption} option={option}/>
+                    <CheckBox key={key} class_={isAnswer(key, answerVisible, selectedOption[key], answer)} value={key} isAnswer isSelected={selectedOption[key]} selectOption={selectOption} option={option}/>
                 )
             }
         </div>)
